@@ -3,18 +3,21 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 import ComponentsScreen from "./ComponentsScreen";
 
 const HomeScreen = (props) => {
-  const {navigation: {navigate}} = props;
+  const {
+    navigation: { navigate },
+  } = props;
 
   return (
     <View>
-      <Text style={styles.text}>test</Text>
+      <Text style={styles.text}>Home Screen</Text>
       <Button
         title="Go to components demo"
         onPress={() => navigate("Components")}
       ></Button>
+      <Button title="Go To List Demo" onPress={() => navigate("List")} />
       <Button
-        title="Go To List Demo"
-        onPress={() => navigate("List")}
+        title="Go to Image Screen"
+        onPress={() => navigate("ImageScreen")}
       />
     </View>
   );
